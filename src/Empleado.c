@@ -198,6 +198,7 @@ int sortEmployees(Employee* list, int len, int order)
 
 	if(list != NULL && len >0 && (order == 1 || order == 0))
 	{
+		retorno=0;
 		switch (order) {
 			case 1:
 				do
@@ -254,6 +255,7 @@ int printEmployeesArray(Employee* list, int length)
 
 	if(list!=NULL && length>=0)
 	{
+		retorno=0;
 		for(int i=0;i<length;i++)
 		{
 			printEmployee(&list[i]);
