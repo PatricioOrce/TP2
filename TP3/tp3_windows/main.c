@@ -31,6 +31,8 @@ int main()
 
 	LinkedList* listaEmpleados = ll_newLinkedList();
 	int opcion;
+	int flagPrimeroTxt = 0;
+	int flagPrimeroBin = 0;
 
 	do{
 		utn_getNumero(&opcion, "Ingrese una opcion:\n1] Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n"
@@ -40,9 +42,11 @@ int main()
 
 		switch (opcion) {
 			case 1:
+				flagPrimeroTxt = 1;
 				controller_loadFromText("data.csv", listaEmpleados);
 				break;
 			case 2:
+				flagPrimeroBin = 1;
 				controller_loadFromBinary("data.bin", listaEmpleados);
 				break;
 			case 3:
@@ -61,10 +65,24 @@ int main()
 				controller_sortEmployee(listaEmpleados);
 				break;
 			case 8:
-				controller_saveAsText("data.csv", listaEmpleados);
+				if(flagPrimeroTxt==1)
+				{
+					controller_saveAsText("data.csv", listaEmpleados);
+				}
+				else
+				{
+					printf("No es posible guardar datos en un archivo sin previamente haberlos cargado.(Modo Texto)\n");
+				}
 				break;
 			case 9:
-				controller_saveAsBinary("data.bin", listaEmpleados);
+				if(flagPrimeroBin==1)
+				{
+					controller_saveAsBinary("data.bin", listaEmpleados);
+				}
+				else
+				{
+					printf("No es posible guardar datos en un archivo sin previamente haberlos cargado.(Modo Binario)\n");
+				}
 				break;
 			case 10:
 				printf("Saliste Excitosamente!.\n");

@@ -21,6 +21,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 	int flagFirst = 0;
 	int conteo=0;
 
+
 	if(pFile != NULL && pArrayListEmployee != NULL)
 	{
 		do

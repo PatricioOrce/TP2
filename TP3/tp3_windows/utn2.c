@@ -241,7 +241,7 @@ int isName(char* nombre)
 	{
 		while(nombre[i] != '\0')
 		{
-			if((nombre[i] >= 'A' && nombre[i] <= 'Z') || (nombre[i] >= 'a' && nombre[i] <= 'z') || nombre[i]=='-' || nombre[i]==' ')
+			if((nombre[i] >= 'A' && nombre[i] <= 'Z') || (nombre[i] >= 'a' && nombre[i] <= 'z') || nombre[i]==' ')
 			{
 				nombre[0]=toupper(nombre[0]);
 				retorno = 0;
@@ -300,7 +300,7 @@ int utn_getName(char* nombre,int limite,char* mensaje,char* mensajeError, int re
  * \param mensaje Puntero al mensaje que muestra por pantalla
  * \return Retorna 0 si se obtuvo el numero y -1 si no
  */
-int utn_getDireccion(char* direccion,int limite,char* mensaje,char* mensajeError, int reintentos)
+/*int utn_getDireccion(char* direccion,int limite,char* mensaje,char* mensajeError, int reintentos)
 {
 	int retorno = -1;
 	char bufferChar[limite];
@@ -325,7 +325,7 @@ int utn_getDireccion(char* direccion,int limite,char* mensaje,char* mensajeError
 
 	}
 	return retorno;
-}
+}*/
 
 /**
  * \brief Pide al usuario un caracter
