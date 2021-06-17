@@ -18,7 +18,8 @@ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo
 maximo, int reintentos);
 int utn_getNumeroFloat(float* pResultado, char* mensaje, char* mensajeError, int minimo, int
 maximo, int reintentos);
-int utn_getString(char* pArray,int limite,char* mensaje);
+int utn_getString(char *msg, char *msgError, char *pCadena, int limite, int reintentos);
+int utn_getStringDos(char* pArray,int limite,char* mensaje);
 int utn_getName(char* nombre,int limite,char* mensaje,char* mensajeError,int reintentos);
 int utn_pedirUnCaracter(char* pCaracter, char* pTexto, char* pTextoError,
 char minimo, char maximo, int reintentos);
@@ -37,6 +38,6 @@ int esNumerica(char* cadena);
 int utn_isCuit(char *pCuit);
 int utn_getDireccion(char* direccion,int limite,char* mensaje,char* mensajeError, int reintentos);
 int utn_getCuit(char* nombre,int limite,char* mensaje,char* mensajeError, int reintentos);
-
+int utn_isAlphabetic(char *pCadena);
 
 #endif /* UTN2_H_ */
